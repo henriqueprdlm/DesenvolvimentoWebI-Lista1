@@ -1,0 +1,98 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+nav.navbar {
+    display: block;
+    padding: 2vw;
+    background-color: rgb(195, 168, 247);
+}
+
+nav.navbar #menu {
+    float: right;
+}
+
+nav.navbar #menu ul li {
+    display: inline-block;
+    margin-left: 4vw;
+}
+
+nav.navbar a {
+    text-decoration: none;
+    color: rgb(124, 65, 241);
+}
+
+nav.navbar a:hover {
+    text-decoration: underline;
+    color: rgb(74, 19, 186);
+}
+
+h1, h2 {
+    color: rgb(124, 65, 241);
+}
+
+.container {
+    width: 80%;
+    margin: 4vh auto;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron div {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    display: inline-flex;
+    background-color: rgb(124, 65, 241);
+    padding: 1vh 2vw;
+    border-radius: 2vh;
+    color: white;
+    margin-top: 2vh;
+}
+
+.btn:hover {
+    background-color: rgb(74, 19, 186);
+}
+
+.grid .linha {
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid .linha .coluna{
+    h2 {
+        text-align: center;
+        padding: 1vh 0;
+        font-size: medium;
+    }
+
+    p:has(a.btn) {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+} 
+
+footer {
+    text-align: center;
+    color: rgb(124, 65, 241);
+    padding: 2vh 0;
+}
+
+@media screen and (max-width: 700px) {
+    .grid .linha {
+        grid-template-columns: 1fr;
+    }
+
+    .grid .linha .coluna {
+        margin-top: 2vh;
+    }
+}
