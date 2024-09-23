@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Graphik, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.column {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex: 1 1 350px;
+    flex-direction: column;
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.row .column label {
+    margin-bottom: 10px;
+}
+
+.row .column input {
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #e5e5e5;
+}
+
+button#tirarFoto {
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: #e5e5e5;
+    font-size: 16px;
+    margin: 20px auto 0;
+}
+
+button#tirarFoto:hover {
+    background-color: #444;
+}
+
+.galeria {
+    margin: 40px 0;
+}
+
+.galeria .row {
+    margin-top: 20px;
+}
+
+.galeria .row .column .element {
+    display: inline-flex;
+    column-gap: 8px;
+    margin: 5px 0;
+}
+
+canvas, img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    align-self: center;
+}
+
+button.btnDeletar {
+    width: 80px;
+    padding: 5px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: #e5e5e5;
+    font-size: 12px;
+    margin: 20px 0 0 auto;
+}
+
+button.btnDeletar:hover {
+    background-color: #444;
+}
+
+/*
+COLORS:
+    light-1: #fff
+    light-2: #e5e5e5
+
+    dark-1: #1a1a1a
+    dark-2: #333
+    dark-3: #444
+*/

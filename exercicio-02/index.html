@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,24 @@
     <meta name="author" content="Henrique Pieri de Lima" />
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     
     <title>To Do List</title>
 </head>
 <body>
     <div class="container">
+        <div class="theme">
+            <button id="btn-change-theme" onclick="changeTheme()"><img src="img/theme-dark.png" id="img-theme" alt="Change theme"></button>
+        </div>
+
         <div class="to-do-list">
-            <h2>To Do List <img src="img/icon.png" alt=""></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text" autofocus>
-                <button onclick="addTask()">Add</button>
+            <div class="to-do-list-header">
+                <h2>To Do List</h2>
+                <input type="text" id="search-input" placeholder="Search a task" onkeyup="filterTasks()">
+            </div>
+            <div class="add-task">
+                <input type="text" id="task-input" placeholder="Add your text" autofocus>
+                <button id="btn-add-task" onclick="addTask()">Add</button>
             </div>
             <ul id="list-container">
                 <!-- <li class="checked">Task 1</li>

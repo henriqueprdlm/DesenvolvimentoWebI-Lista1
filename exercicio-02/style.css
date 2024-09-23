@@ -1,3 +1,13 @@
+/*
+COLORS:
+    light-1: #fff
+    light-2: #edeef0
+
+    dark-1: #1a1a1a
+    dark-2: #333
+    dark-3: #444
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -5,45 +15,98 @@
     font-family: 'Poppins', sans-serif; 
 }
 
+body {
+    background-color: #edeef0;
+    transition: background-color 0.3s;
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, rgb(82, 55, 146), rgb(69, 44, 126));
     padding: 10px;
+}
+
+button#btn-change-theme {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    background: transparent;
+}
+
+button#btn-change-theme img {
+    width: 30px;
+}
+
+body.dark {
+    background-color: #1a1a1a;
 }
 
 .to-do-list {
     width: 100%;
     max-width: 540px;;
-    background: #fff;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 30px;
     border-radius: 10px;
+    background-color: #fff;
+    color: #1a1a1a;
+    transition: background-color 0.3s;
 }
 
-.to-do-list h2 {
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.to-do-list.dark {
+    background-color: #333;
+    color: #fff;
 }
 
-.to-do-list h2 img {
-    width: 30px;
-    margin-left: 10px;
-}
-
-.row {
+.to-do-list-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #edeef0;
+    margin-bottom: 20px;
+}
+
+.to-do-list.header h2 {
+    display: flex;
+    align-items: center;
+}
+
+input#search-input {
+    display: flex;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #edeef0;
+    padding: 10px;
+    padding-left: 25px;
+    transition: background-color 0.3s;
+}
+
+input#search-input.dark {
+    background-color: #444;
+    color: #fff;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    background-color: #edeef0;
+    transition: background-color 0.3s;
 }
 
-input {
+.add-task.dark {
+    background-color: #444;
+}
+
+.add-task.dark input {
+    color: #fff;
+}
+
+input#task-input {
     flex: 1;
     border: none;
     outline: none;
@@ -51,11 +114,11 @@ input {
     padding: 10px;
 }
 
-button {
+button#btn-add-task {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
+    background-color: #ff5945;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -100,12 +163,20 @@ ul li span {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    color: #555;
 }
 
 ul li span:hover {
-    background: #edeef0;
+    background-color: #edeef0;
+}
+
+.to-do-list.dark ul li span{
+    color: #edeef0;
+}
+
+.to-do-list.dark ul li span:hover{
+    background-color: #555;
 }
