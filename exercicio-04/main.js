@@ -15,15 +15,13 @@ navigator.mediaDevices.getUserMedia({video: true})
 function obterLocalizacao() {
     return new Promise((resolve, reject) => {
         if ('geolocation' in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const { latitude, longitude } = position.coords;
-                    resolve({ latitude, longitude });
-                },
-                (error) => {
-                    reject(error);
-                }
-            );
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                resolve({latitude, longitude});
+            }, (error) => {
+                reject(error);
+            });
         } else {
             reject(new Error('Geolocalização não disponível'));
         }
@@ -102,7 +100,7 @@ async function tirarFoto() {
         divElementData.appendChild(textData);
 
         try {
-            const { latitude, longitude } = await obterLocalizacao(); // Espera a localização
+            const { latitude, longitude } = await obterLocalizacao(); 
             let divElementLocalizacao = document.createElement('div');
             divElementLocalizacao.classList.add('element');
             divColumn2.appendChild(divElementLocalizacao);
