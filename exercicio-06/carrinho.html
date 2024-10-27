@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Lista de Exercícios 1 - Exercício 6" />
+    <meta name="author" content="Henrique Pieri de Lima" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>All Store</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img src="img/logo-branca.png" alt="Logo de uma loja">
+                <h1>All Store</h1>
+            </a>
+    
+            <div id="busca">
+                <input type="text" id="busca-input">
+                <button><img src="img/busca.png" alt="Símbolo de lupa"></button>
+            </div>
+    
+            <a href="carrinho.html">
+                <img src="img/carrinho.png" alt="Símbolo de carrinho">
+            </a>
+        </div>
+
+    </header>
+
+    <nav id="menu">
+        <div class="container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Categorias</button>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Marcas</button>
+                <div class="dropdown-content">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="carrinho">
+        <div class="container">
+            <div class="car-resumo">
+                <h2>Seu Carrinho</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produtos</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="car-resumo-produto" colspan="2">
+                                <img src="img/produto1">
+                                Produto 1
+                            </td> 
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>R$ 50,00</td>
+                            <td><button class="remover-btn">Remover</button></td>
+                        </tr>
+                        <tr>
+                            <td class="car-resumo-produto" colspan="2">
+                                <img src="img/produto1">
+                                Produto 1
+                            </td> 
+                            <td><input type="number" value="2" min="1"></td>
+                            <td>R$ 60,00</td>
+                            <td><button class="remover-btn">Remover</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>R$ 110,00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="car-checkout">
+                <a href="checkout.html" class="checkout-btn">Finalizar Compra</a>
+                <a href="index.html" class="continuar-btn">Continuar comprando</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 - All Store</p>
+        </div>
+    </footer>
+   
+    <script src="main.js"></script>
+</body>
+</html>
